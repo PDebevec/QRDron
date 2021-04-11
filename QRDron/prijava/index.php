@@ -1,0 +1,35 @@
+<?php
+include_once "..//lib//db.php";
+
+?>
+<html>
+    <head>
+        <title>QRdron</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="..//css.css">
+    </head>
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-fixed-top bg-c">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost/QRDron">QRDron</a>
+                <ul class="nav">
+                    <li><a href="http://localhost/QRDron/registracija" class="btn btn-outline-info m-1">Registracija</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content-->
+        <div class="d-flex justify-content-center align-items-center bg-ts h-75">
+            
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="tc-tm">
+                <h1 style="font-size: 4vh;">Kontakti</h1>
+            </div>
+        </footer>
+    </body>
+</html>
