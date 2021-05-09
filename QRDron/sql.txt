@@ -1,0 +1,43 @@
+create databse qrdron;
+
+create table pilotov(
+    id_p int not null auto_increment primary key,
+    id_l int,
+    id_d int,
+    ime varchar(64),
+    priimek varchar(64),
+    mail varchar(64),
+    geslo varchar(128),
+    telefon varchar(64)
+);
+
+create table lastnik(
+    id_l int not null auto_increment primary key,
+    ime varchar(64),
+    priimek varchar(64),
+    podjetje varchar(128),
+    mail varchar(64),
+    geslo varchar(128),
+    telefon varchar(64)
+);
+
+create table drona(
+    id_d int not null auto_increment primary key,
+    id_z int,
+    ime varchar(64),
+    serst varchar(64),
+    teza varchar(64)
+);
+
+create table qrid(
+    id_q int not null auto_increment primary key,
+    id_l int,
+    id_p int,
+    id_d int,
+    qrurl int
+);
+
+create table znamka_d(
+    id_z int not null auto_increment primary key,
+    ime_z varchar(64)
+);

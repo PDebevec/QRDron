@@ -1,0 +1,20 @@
+/*
+#0B0C10 crna
+#1F2833 temno siva
+#C5C6C7 siva
+#66FCF1 svetlo modra
+#45A29E temo modra
+*/
+body{ background-color: black; }
+
+.bg-c{ background-color: #0B0C10; }
+.bg-ts{ background-color: #1F2833; }
+.bg-s{ background-color: #C5C6C7; }
+.bg-sm{ background-color: #66FCF1; }
+.bg-tm{ background-color: #45A29E; }
+
+.tc-c{ color: #0B0C10; }
+.tc-ts{ color: #1F2833; }
+.tc-s{ color: #C5C6C7; }
+.tc-sm{ color: #66FCF1; }
+.tc-tm{ color: #45A29E; }

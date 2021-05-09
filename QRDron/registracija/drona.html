@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>QRdron</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="..//css.css">
+        <script type="text/javascript" src="..//lib//js_funkcije.js"></script>            
+    </head>
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-fixed-top bg-c">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost/QRDron">QRDron</a>
+                <ul class="nav">
+                    <li><a href="http://localhost/QRDron/prijava" class="btn btn-outline-primary m-1">Prijava</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content-->
+        <div class="d-flex justify-content-center align-items-center bg-ts py-5">
+            <form class="my-5" style="min-width: 40%;">
+                <div class="form-group">
+                    <select class="form-control" name="znamka" id="z">
+                        <option>Znamka</option>
+                        <script>
+                            let xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = () => {
+                                if(xhttp.readyState == 4 && xhttp.status == 200){
+                                    document.getElementById("z").innerHTML = xhttp.responseText;
+                                }
+                            }
+                            xhttp.open("GET", "..//lib//znamke.txt", true);
+                            xhttp.send();
+                        </script>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="ime" placeholder="Ime Drona">
+                </div>
+                <div class="form-group" >
+                    <input class="form-control" type="text" name="serst" placeholder="seriska številka">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="teza" placeholder="teža">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <script>
+                    $("form").on("submit", (e) => {
+                        e.preventDefault();
+
+                        $.ajax({
+                            type: "GET",
+                            url: "reg_dron.php",
+                            data: $("form").serialize(),
+                            error: (res) => {
+                                alert("error: "  + res);
+                            },
+                            success: (res) => {
+                                alert(res);
+                            }
+                        });
+                    });
+                </script>
+            </form>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="tc-tm">
+                <h1 style="font-size: 4vh;">Kontakti</h1>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>QRdron</title>
+        <link rel="icon" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-fixed-top bg-c">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost/QRDron">QRDron</a>
+                <ul class="nav">
+                    <li><a href="http://localhost/QRDron/prijava" class="btn btn-outline-primary m-1">Prijava</a></li>
+                    <li><a href="http://localhost/QRDron/registracija" class="btn btn-outline-info m-1">Registracija</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content-->
+        <div class="d-flex justify-content-center align-items-center bg-ts py-5">
+            <div class="tc-tm container my-5">
+                <center><h1 style="font-size: 4vh;">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </h1></center>
+                <br><br>
+                <div class="input-group d-flex justify-content-center align-items-center">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">ID</span>
+                    </div>
+                    <input type="text" class="form-control" style="max-width: 30vh;" id="qrid">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="pojdi">Serch</button>
+                        <script>
+                            document.getElementById("pojdi").onclick = () => {
+                                location.href = "http://localhost//QRDron//QRID?id=" + document.getElementById("qrid").value;
+                            }
+                        </script>
+                        <button class="btn btn-primary" type="button">Scan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="tc-tm">
+                <h1 style="font-size: 4vh;">Kontakti</h1>
+            </div>
+        </footer>
+    </body>
+</html>
